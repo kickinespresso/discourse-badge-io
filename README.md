@@ -17,14 +17,14 @@ Run the rake task as the following `rake export_user_badges <export_file_name>`
 
 The resulting CSV file gives you a column of users by their emails and a list of the badges associated with that user.
 
-![Export User Badge Example](https://raw.githubusercontent.com/kickinespresso/discourse/master/export.png)
+![Export User Badge Example](https://raw.githubusercontent.com/kickinespresso/discourse-badge-io/master/export.png)
 
 
 ### Importing (Adding Badges to Users)
 
 The CSV file should follow the same format as the exported CSV. Add the new Badge to the list of badges for the user(s) you intead to add the badge to. In the screenshot below, note the new badge in RED. **Please note that the new badge maintains a COMMA and SPACE after the previous badge keeping the format consistent.** The badge name MUST be exact and is Case Senstive. 
 
-![Import User Badge Example](https://raw.githubusercontent.com/kickinespresso/discourse/master/import.png)
+![Import User Badge Example](https://raw.githubusercontent.com/kickinespresso/discourse-badge-io/master/import.png)
 
 When your import file is setup, tun the rake task as the following `rake import_user_badges <path/import_file_name>`
 
@@ -38,7 +38,7 @@ This will add a any user badge to a user that user does not already have. It **W
 
 To remove a user badge, provide a CSV with one column of the emails you wish to remove user badges from. 
 
-![Remove User Badge Example](https://raw.githubusercontent.com/kickinespresso/discourse/master/import.png)
+![Remove User Badge Example](https://raw.githubusercontent.com/kickinespresso/discourse-badge-io/master/remove.png)
 
 
 When your import file is setup, tun the rake task as the following `rake remove_user_badges <path/import_file_name> <badge_name>` including the path to the list of user emails and the name of the badge to be removed.
